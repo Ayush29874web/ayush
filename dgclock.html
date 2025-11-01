@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            
+        }
+        body{
+            text-align: center;
+            background: radial-gradient(circle, blue, green);
+        }
+        h1{
+            color: rgb(162, 171, 169);
+            text-decoration: underline;
+            font-size: 60px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        p{
+            color: green;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 50px;
+        }
+    </style>
+    <title>Digital Clock</title>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <p></p>
+  
+</body>
+<script>
+    let para = document.querySelector("p");
+    let para1 = document.querySelectorAll(".dat");
+    setInterval(() => {
+    let date = new Date();
+    para.innerText = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+" \n\n"+date.getDate()+"-"+date.getMonth()+"-"+date.getFullYear();
+    },1000);
+    
+</script>
+</html>
